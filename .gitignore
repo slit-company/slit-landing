@@ -1,0 +1,35 @@
+# OS / IDE
+.DS_Store
+
+# Tool / agent working directories
+.claude/
+.playwright-mcp/
+.tmp/
+
+# Nested git repos (separate projects, not part of this landing site)
+portfolio-repos/
+
+# Debug / QA screenshots from local dev (not used by the site)
+cta-anyon-with-bg.png
+cta-bg-bottom-aligned.png
+cta-button-final.png
+cta-services-with-bg.png
+footer-mono.png
+gradient-border-mono.png
+home-cta-bottom.png
+insights-after-desktop.png
+insights-mobile.png
+insights-v2-desktop.png
+insights-v3-desktop.png
+labels-final.png
+ph-portfolio-mono.png
+ph-services-final.png
+ph-services-mono.png
+process-cards-final.png
+process-cards-fixed.png
+process-roadmap-mono.png
+process-with-4o-images.png
+services-with-4o-images.png
+slit-hero-portfolio-anyon.png
+slit-hero-services.png
+stat-numbers-fixed.png
