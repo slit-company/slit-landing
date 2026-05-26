@@ -10,6 +10,14 @@
 <link href="/Frame%2018.png?v=2" rel="icon" type="image/png"/><link href="/Frame%2018.png?v=2" rel="shortcut icon"/><link href="/Frame%2018.png?v=2" rel="apple-touch-icon"/>
 <meta content="포트폴리오 — SL:IT" property="og:title"/>
 <meta content="9개 프로젝트 레퍼런스 · 운영 가능한 제품 중심으로 작업해온 SL:IT" property="og:description"/>
+<style id="slit-portfolio-fallback-cards">
+.slit-project-image-card.text-fallback{background:#f3efe6;display:flex;align-items:flex-end;padding:28px;min-height:260px}
+.slit-project-fallback-copy{display:flex;flex-direction:column;gap:12px;max-width:82%}
+.slit-project-fallback-kicker{display:inline-flex;align-self:flex-start;padding:7px 10px;background:#141414;color:#fff;font-size:12px;line-height:1;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:2px}
+.slit-project-fallback-title{margin:0;color:#141414;font-size:30px;line-height:1.14;letter-spacing:-.03em;font-weight:800}
+.slit-project-fallback-body{margin:0;color:#4b4b4b;font-size:15px;line-height:1.65}
+@media screen and (max-width:767px){.slit-project-image-card.text-fallback{padding:22px;min-height:220px}.slit-project-fallback-copy{max-width:100%}.slit-project-fallback-title{font-size:24px}}
+</style>
 </head>
 <body class="body">
 
@@ -149,8 +157,12 @@
 
           <div class="insight-collection-item w-dyn-item" role="listitem">
             <a class="insight-item w-inline-block" href="/kr/portfolio/lyla/">
-              <div class="insight-item-image-wrap slit-project-image-card">
-                <img alt="Lyla AI 어시스턴트 앱 화면" class="slit-project-image" loading="lazy" src="/layla.png"/>
+              <div class="insight-item-image-wrap slit-project-image-card text-fallback">
+                <div class="slit-project-fallback-copy">
+                  <div class="slit-project-fallback-kicker">AI Assistant</div>
+                  <h3 class="slit-project-fallback-title">Lyla</h3>
+                  <p class="slit-project-fallback-body">채팅, 규칙, 메모리, 루틴, 푸시, 전화 채널을 하나의 제품 경험으로 묶은 AI 개인 비서 시스템</p>
+                </div>
               </div>
               <div class="insight-item-header">
                 <div class="insight-item-category"><span class="slit-logo-mark">SL:IT</span></div>
@@ -166,8 +178,12 @@
 
           <div class="insight-collection-item w-dyn-item" role="listitem">
             <a class="insight-item w-inline-block" href="/kr/portfolio/nexus-acp/">
-              <div class="insight-item-image-wrap slit-project-image-card">
-                <img alt="Nexus ACP 개발 도구 화면" class="slit-project-image" loading="lazy" src="/nexus.png"/>
+              <div class="insight-item-image-wrap slit-project-image-card text-fallback">
+                <div class="slit-project-fallback-copy">
+                  <div class="slit-project-fallback-kicker">Developer Tool</div>
+                  <h3 class="slit-project-fallback-title">Nexus ACP</h3>
+                  <p class="slit-project-fallback-body">터미널 중심 AI 에이전트 개발 환경을 네이티브 GUI 워크스페이스로 재구성한 Tauri 기반 개발 도구</p>
+                </div>
               </div>
               <div class="insight-item-header">
                 <div class="insight-item-category"><span class="slit-logo-mark">SL:IT</span></div>
@@ -183,8 +199,12 @@
 
           <div class="insight-collection-item w-dyn-item" role="listitem">
             <a class="insight-item w-inline-block" href="/kr/portfolio/treedi/">
-              <div class="insight-item-image-wrap slit-project-image-card">
-                <img alt="TREEDI AI 학습 인터페이스 화면" class="slit-project-image" loading="lazy" src="/treedi.png"/>
+              <div class="insight-item-image-wrap slit-project-image-card text-fallback">
+                <div class="slit-project-fallback-copy">
+                  <div class="slit-project-fallback-kicker">AI Learning UX</div>
+                  <h3 class="slit-project-fallback-title">TREEDI</h3>
+                  <p class="slit-project-fallback-body">질문 흐름을 선형 채팅에서 트리 구조 탐색으로 바꾸기 위해 만든 AI 학습 인터페이스 실험</p>
+                </div>
               </div>
               <div class="insight-item-header">
                 <div class="insight-item-category"><span class="slit-logo-mark">SL:IT</span></div>
