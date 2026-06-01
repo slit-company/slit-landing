@@ -382,7 +382,7 @@ HEAD = """<!DOCTYPE html>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>{title} — SL:IT 포트폴리오</title>
 <meta content="{desc}" name="description"/>
-<link crossorigin="anonymous" href="https://cdn.prod.website-files.com/6893fd49c41afeab4a5ef473/css/letsur-n.webflow.shared.c3da34d10.css" rel="stylesheet" type="text/css"/>
+<link crossorigin="anonymous" href="/assets/css/site.css" rel="stylesheet" type="text/css"/>
 <link href="/kr/assets/slit-shared.css" rel="stylesheet" type="text/css"/>
 <link href="/Group%207.png" rel="shortcut icon"/>
 <meta content="{title} — SL:IT 포트폴리오" property="og:title"/>
@@ -456,8 +456,8 @@ FOOTER = """
   </div>
 </div>
 
-<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6893fd49c41afeab4a5ef473" type="text/javascript"></script>
-<script src="https://cdn.prod.website-files.com/6893fd49c41afeab4a5ef473/js/webflow.7a9c4908.c57223fa47f28ecb.js" type="text/javascript"></script>
+<script src="/assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+<script src="/assets/js/webflow.7a9c4908.c57223fa47f28ecb.js" type="text/javascript"></script>
 <script>
 (function(){
   var btn = document.querySelector('.menu-button');

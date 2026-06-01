@@ -10,7 +10,7 @@
 portfolio-repos/
 
 # Debug / QA screenshots from local dev (root-level PNGs not used by the site).
-# Site assets live under /cdn.prod.website-files.com/, /kr/assets/, or have meaningful names like 1o.png, back-foot.png.
+# Site assets live under /assets/, /kr/assets/, or have meaningful names like 1o.png, back-foot.png.
 cta-*.png
 ph-*.png
 process-*.png

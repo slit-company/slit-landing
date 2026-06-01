@@ -1,6 +1,6 @@
 /* SL:IT — shared sub-page overrides (matches /kr/ home Webflow components) */
 
-/* Mono palette override — neutralizes letsur mint to black/gray/white */
+/* Mono palette override — neutralizes the base theme mint to black/gray/white */
 :root {
   --primary-green: #141414 !important;
   --point-green: #141414 !important;
