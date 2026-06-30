@@ -432,3 +432,15 @@
   box-decoration-break: clone;
 }
 
+
+
+/* Beige CTA band — matches home hero texture (backre.png) */
+.slit-cta-beige{background-color:#f0f0f0;background-image:url(/backre.png);background-size:cover;background-position:center;background-repeat:no-repeat}
+.slit-cta-beige .cta-heading{color:#141414 !important}
+.slit-cta-beige .team-close-copy{color:#141414 !important}
+.slit-cta-beige .cta-wrap .primary-button{background-color:#141414 !important;color:#fff !important;border-color:#141414 !important}
+.slit-cta-beige .cta-wrap .primary-button div{color:#fff !important}
+.slit-cta-beige .cta-wrap .primary-button:hover{background-color:#000 !important;color:#fff !important}
+
+/* heading wrap fix — long ·-joined tokens must not overflow into neighbor cards */
+.insight-item-heading{word-break:keep-all;overflow-wrap:anywhere}
