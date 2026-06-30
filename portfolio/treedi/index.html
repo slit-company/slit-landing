@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>TREEDI — SLIT 포트폴리오</title>
+<meta content="질문 흐름을 선형 채팅에서 트리 구조 탐색으로 바꾼 AI 학습 인터페이스 실험" name="description"/>
+<link crossorigin="anonymous" href="/assets/css/site.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/slit-shared.css?v=3" rel="stylesheet" type="text/css"/>
+<link href="/Group%207.png" rel="shortcut icon"/>
+<meta content="TREEDI — SLIT 포트폴리오" property="og:title"/>
+<meta content="질문 흐름을 선형 채팅에서 트리 구조 탐색으로 바꾼 AI 학습 인터페이스 실험" property="og:description"/>
+</head>
+<body class="body">
+
+<div class="navbar w-nav" data-animation="default" data-collapse="medium" data-duration="500" id="navbar" role="banner">
+  <div class="nav-container w-container">
+    <a class="brand w-nav-brand" href="/"><img alt="SLIT" class="brand-image" loading="lazy" src="/Group%207.png" style="width:128px;height:auto;object-fit:contain" width="128"/></a>
+    <nav class="nav-menu w-nav-menu" role="navigation">
+      <div class="nav-link-wrap">
+        <a class="nav-1depth-link w-inline-block" href="/services/"><div class="nav-menu-label">서비스</div></a>
+        <a class="nav-1depth-link w-inline-block" href="/process/"><div class="nav-menu-label">작업 방식</div></a>
+        <a class="nav-1depth-link w-inline-block" href="/portfolio/"><div class="nav-menu-label">포트폴리오</div></a>
+        <a class="nav-1depth-link w-inline-block" href="/insights/"><div class="nav-menu-label">인사이트</div></a>
+        <a class="nav-1depth-link w-inline-block" href="mailto:max@slit.company"><div class="nav-menu-label">문의하기</div></a>
+      </div>
+    </nav>
+    <div class="menu-button w-nav-button"><div class="menu-line-wrap"><div class="menu-line"></div><div class="menu-line"></div><div class="menu-line"></div></div></div>
+  </div>
+</div>
+
+<section class="slit-hero">
+  <div class="w-layout-blockcontainer container w-container">
+    <a class="slit-back" href="/portfolio/">← 포트폴리오 전체</a>
+    <div class="slit-hero-eyebrow">AI UX 실험</div>
+    <h1 class="slit-hero-title">TREEDI</h1>
+    <p class="slit-hero-sub">AI와의 대화를 단순 채팅 로그가 아니라 탐색 가능한 지식 구조로 바꾸기 위해 만든 트리 기반 학습 도구입니다. 컨텍스트 오염 문제를 구조적으로 해결하는 데 초점을 맞췄습니다.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="slit-detail-meta cols-2">
+      <div><div class="slit-detail-meta-label">개발 기간</div><div class="slit-detail-meta-value">2025.09.23 ~ 2025.10.24</div></div><div><div class="slit-detail-meta-label">문제 공감</div><div class="slit-detail-meta-value">20명 중 18명</div></div>
+    </div>
+
+    <div class="slit-prose">
+      <h2>개요</h2>
+      <p>React 기반 웹 애플리케이션과 Electron 위젯, Supabase 저장 구조, OpenAI 연동을 함께 실험한 제품입니다.</p>
+
+      <h2>클라이언트 과제</h2>
+      <p>AI를 학습 보조 도구로 쓰는 사용자는 한 답변을 읽는 순간 여러 갈래의 추가 질문이 생깁니다. 그러나 일반적인 채팅 인터페이스에서는 새 질문을 기존 맥락 위에 이어 붙여야 하므로 서로 다른 탐색 흐름이 한 대화에 뒤섞이며 컨텍스트 오염이 발생합니다. 이 문제는 답변 정확도뿐 아니라 사용자의 인지 부담으로도 이어집니다. 인터뷰 20명 중 18명이 이 문제에 공감했고, 100명 관찰 중 82명이 실제로 AI를 학습에 활용하고 있다는 점도 확인되었습니다.</p>
+
+      <h2>솔루션</h2>
+      <p>각 질문과 답변을 트리 노드로 취급하고, 하나의 응답에서 파생되는 여러 궁금증을 별도 브랜치로 분기할 수 있도록 설계했습니다. 한 주제를 깊게 파고드는 동시에 다른 방향의 탐구를 독립된 컨텍스트로 유지할 수 있습니다. 제품 경험은 웹 버전과 Electron 위젯 버전으로 병행 실험되었습니다. 웹에서는 트리 탐색과 콘텐츠 읽기 경험을 다듬고, Electron 위젯에서는 다른 작업 화면 위에서 단축키로 즉시 호출하는 사용 패턴을 검증했습니다. 기술적으로는 D3 기반 트리 시각화·OpenAI 연동·저장 구조·렌더링 레이어를 조합해 질문 생성·분기·복귀·재탐색이 하나의 흐름으로 이어지게 만들었습니다.</p>
+
+      <h2>아키텍처</h2>
+      <p>리포지토리는 `src/`·`electron/`·`server/`·`supabase/`·`api/`·`prompts/`를 중심으로 구성됩니다. `src/` 내부에는 `features/`·`domain/`·`infrastructure/`·`views/`·`components/`·`shared/`·`theme/`가 분리되어 있어 UI 레이어와 도메인 로직·공통 인프라를 한 파일에 몰아넣지 않고 역할별로 나눕니다. `electron/`은 메인 프로세스·프리로드·서비스·트레이·접근성 보조 기능을 담당하며 데스크톱 위젯 레이어를 구성합니다.</p>
+
+      <h2>핵심 구현 하이라이트</h2>
+      <ul>
+        <li>D3 트리 시각화로 질문과 답변의 분기 구조를 화면에서 바로 탐색</li><li>하나의 응답에서 여러 후속 질문을 독립 브랜치로 확장해 컨텍스트 오염 문제를 구조적으로 완화</li><li>Electron 위젯 형태를 함께 실험해 다른 작업 중에도 단축키로 호출 가능한 사용 시나리오 검증</li><li>웹 버전과 데스크톱 버전 병행 운영으로 학습 도구로서의 접근성과 몰입감 테스트</li><li>Markdown·수식·코드 하이라이트 렌더링으로 설명형 학습 콘텐츠 소비 경험 강화</li><li>빠른 프로토타이핑 이후 도메인·인프라·기능 단위로 구조를 나누며 유지보수 가능한 형태로 정리</li>
+      </ul>
+
+      <h2>성과 지표</h2>
+      <table>
+        <tbody>
+          <tr><th>핵심 문제 정의</th><td>컨텍스트 오염 해결</td></tr><tr><th>사용자 인터뷰</th><td>20명 중 18명 공감</td></tr><tr><th>사용 패턴 관찰</th><td>100명 중 82명 AI 학습 활용</td></tr><tr><th>핵심 인터페이스</th><td>D3 트리 시각화</td></tr><tr><th>확장 실험</th><td>Electron 위젯 병행</td></tr>
+        </tbody>
+      </table>
+
+      <h2>기술 스택</h2>
+      <div class="slit-stack">
+        <span class="slit-stack-item">React 18</span><span class="slit-stack-item">JavaScript</span><span class="slit-stack-item">Tailwind CSS</span><span class="slit-stack-item">Framer Motion</span><span class="slit-stack-item">D3.js</span><span class="slit-stack-item">Electron</span><span class="slit-stack-item">Supabase</span><span class="slit-stack-item">OpenAI</span><span class="slit-stack-item">react-markdown</span><span class="slit-stack-item">KaTeX</span><span class="slit-stack-item">Shiki</span><span class="slit-stack-item">Playwright</span>
+      </div>
+
+      <h2>역량 태그</h2>
+      <p style="font-size:14px;color:#555">React · D3.js · Electron · AI UX · Learning Tools · Supabase · Information Architecture · Prototyping</p>
+    </div>
+  </div>
+</section>
+
+<section class="section slit-cta-beige">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="cta-wrap">
+      <div class="cta-header">
+        <h2 class="cta-heading">우리 조직의 가짜 노동은 어디일까요?</h2>
+        <a class="primary-button large w-inline-block" href="mailto:max@slit.company?subject=AX%20진단%20문의"><div>AX 진단 문의하기</div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section gray-10-bg footer space">
+  <div class="nav-container w-container">
+    <div class="footer">
+      <div class="footer-top">
+        <div class="footer-logo-wrap"><a class="brand w-nav-brand" href="/"><img alt="" loading="lazy" src="/Group%207.png" style="width:128px;height:auto;object-fit:contain" width="128"/></a></div>
+        <div class="footer-sitemap-wrap">
+          <div class="footer-sitemap-item">
+            <a class="sitemap-link" href="/services/">서비스</a>
+            <a class="sitemap-link" href="/process/">작업 방식</a>
+            <a class="sitemap-link" href="/portfolio/">포트폴리오</a>
+            <a class="sitemap-link" href="/insights/">인사이트</a>
+            <a class="sitemap-link" href="/team/">채용</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright-wrap">
+          <div class="footer-sitemap-item-copy">
+            <a class="sitemap-link" href="/">홈</a>
+            <div class="footer-devider"></div>
+            <a class="sitemap-link" href="mailto:max@slit.company">이메일 문의</a>
+          </div>
+          <div class="footer-copyright-left-wrap-2">
+            <div class="copryright-link">SLIT</div>
+            <div class="copryright-link">조직 안의 가짜 노동을 줄이는 AX 팀</div>
+            <div class="footer-devider t-hidden"></div>
+            <div class="copryright-link">문의: max@slit.company</div>
+            <div class="footer-devider t-hidden"></div>
+            <div class="copryright-link">주식회사 슬릿컴퍼니 | 대표 전도현</div><div class="footer-devider t-hidden"></div><div class="copryright-link">사업자등록번호 882-81-03956</div><div class="footer-devider t-hidden"></div><div class="copryright-link">서울특별시 성동구 왕십리로 222, 한양대학교 한양종합기술연구원(히트관) 지하2층 B215호</div><div class="footer-devider t-hidden"></div><div class="copryright-link">© SLIT. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+<script src="/assets/js/webflow.7a9c4908.c57223fa47f28ecb.js" type="text/javascript"></script>
+<script>
+(function(){
+  var btn = document.querySelector('.menu-button');
+  var nav = document.getElementById('navbar');
+  if (!btn || !nav) return;
+  new MutationObserver(function(){
+    nav.classList.toggle('nav-open', btn.classList.contains('w--open'));
+  }).observe(btn, {attributes:true, attributeFilter:['class']});
+})();
+</script>
+</body>
+</html>
