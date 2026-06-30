@@ -3,5 +3,10 @@
   "redirects": [
     { "source": "/kr", "destination": "/", "permanent": true },
     { "source": "/kr/:path(.*)", "destination": "/:path", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/careers", "destination": "https://pricey-painter-0c5.notion.site/SLIT-75e506425d2a44639dfec738f3e3c646" },
+    { "source": "/careers/", "destination": "https://pricey-painter-0c5.notion.site/SLIT-75e506425d2a44639dfec738f3e3c646" },
+    { "source": "/careers/:path(.*)", "destination": "https://pricey-painter-0c5.notion.site/:path" }
   ]
 }
