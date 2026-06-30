@@ -2,7 +2,6 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/kr", "destination": "/", "permanent": true },
-    { "source": "/kr/", "destination": "/", "permanent": true },
-    { "source": "/kr/:path+", "destination": "/:path+", "permanent": true }
+    { "source": "/kr/:path(.*)", "destination": "/:path", "permanent": true }
   ]
 }
